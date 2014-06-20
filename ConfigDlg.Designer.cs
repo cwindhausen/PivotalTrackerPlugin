@@ -31,8 +31,8 @@
             System.Windows.Forms.Label label1;
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.token = new System.Windows.Forms.TextBox();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.token = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -71,17 +71,6 @@
             this.button2.Text = "&Cancel";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // token
-            // 
-            this.token.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.token.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PivotalTrackerPlugin.Properties.Settings.Default, "Token", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.token.Location = new System.Drawing.Point(15, 25);
-            this.token.Name = "token";
-            this.token.Size = new System.Drawing.Size(332, 20);
-            this.token.TabIndex = 1;
-            this.token.Text = global::PivotalTrackerPlugin.Properties.Settings.Default.Token;
-            // 
             // richTextBox
             // 
             this.richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -99,6 +88,17 @@
             this.richTextBox.Text = "You can find your API token on the Pivotal Tracker web site at the bottom of this" +
     " page:  https://www.pivotaltracker.com/profile";
             this.richTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.OnHyperlink);
+            // 
+            // token
+            // 
+            this.token.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.token.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PivotalTrackerPlugin.Properties.Settings.Default, "ApiToken", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.token.Location = new System.Drawing.Point(15, 25);
+            this.token.Name = "token";
+            this.token.Size = new System.Drawing.Size(332, 20);
+            this.token.TabIndex = 1;
+            this.token.Text = global::PivotalTrackerPlugin.Properties.Settings.Default.ApiToken;
             // 
             // ConfigDlg
             // 

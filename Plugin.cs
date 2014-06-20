@@ -19,7 +19,7 @@ namespace PivotalTrackerPlugin
         {
             Debug.WriteLine("SourceLinks calling Configure()");
 
-            using (var dialog = new ConfigDlg(Settings.Default.Token))
+            using (var dialog = new ConfigDlg(Settings.Default.ApiToken))
             {
                 if (dialog.ShowDialog() == DialogResult.OK)
                     Settings.Default.Save();
@@ -35,10 +35,10 @@ namespace PivotalTrackerPlugin
 
             try
             {
-                if (string.IsNullOrEmpty(Settings.Default.Token))
+                if (string.IsNullOrEmpty(Settings.Default.ApiToken))
                     return "You need to configure your access token under Tools/Options/SourceLinks";
 
-                var story = Story.Download(storyId, Settings.Default.Token);
+                var story = Story.Download(storyId, Settings.Default.ApiToken);
                 return story.ToString();
             }
             catch(Exception ex)
@@ -65,7 +65,7 @@ namespace PivotalTrackerPlugin
             get
             {
                 Debug.WriteLine("SourceLinks getting OverrideUrl property");
-                return "https://www.pivotaltracker.com/story/show/%s";
+                return Settings.Default.StoryUrl;
             }
         }
     }

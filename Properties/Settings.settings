@@ -1,9 +1,18 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PivotalPlugin.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PivotalTrackerPlugin.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Token" Type="System.String" Scope="User">
+    <Setting Name="ApiToken" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ApiUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.pivotaltracker.com/services/v5/</Value>
+    </Setting>
+    <Setting Name="StoryUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.pivotaltracker.com/story/show/%s</Value>
+    </Setting>
+    <Setting Name="MaxLength" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">256</Value>
     </Setting>
   </Settings>
 </SettingsFile>
